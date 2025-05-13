@@ -1,0 +1,11 @@
+@import "../../styles/variables.css";
+
+.loadingpage_container {
+  min-width: 100%;
+  min-height: 100%;
+
+  background-color: var(--soft-white) 00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

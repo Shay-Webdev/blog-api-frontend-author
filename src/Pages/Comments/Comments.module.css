@@ -1,0 +1,45 @@
+@import "../../styles/variables.css";
+
+.comments_container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+
+  border-top: 5px solid var(--twitter-blue-gray);
+  padding: 1em;
+}
+
+.comments_container > h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-decoration: underline;
+}
+
+.comment_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+
+  padding: 1em;
+  border-bottom: 2px solid var(--twitter-blue-gray);
+}
+
+.comment_content {
+  font-size: large;
+}
+
+.comment_details {
+  align-self: flex-end;
+}
+
+.add_comment_button {
+  border-radius: 50%;
+  min-width: 2em;
+  min-height: 2em;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 0;
+}

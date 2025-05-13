@@ -1,0 +1,13 @@
+.button_container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.error_span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-evenly;
+  align-items: start;
+}

@@ -1,0 +1,34 @@
+@import "../../styles/variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+.app_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--medium-gray);
+  color: var(--dark-charcoal);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.main_container {
+  flex: 1;
+  min-width: 100%;
+  display: flex;
+}
+/* anchor styles*/
+a {
+  color: var(--glowing-red); /* Blue color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+  color: var(--vivid-orange); /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+  text-shadow: 0 0 10px var(--orange-glow);
+}

@@ -1,0 +1,29 @@
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comment_fieldset {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 16px;
+}
+.comment_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+
+  min-width: 100%;
+  min-height: 60%;
+}

@@ -1,0 +1,25 @@
+/* // TODO:make dynamic header components */
+@import "../../styles/variables.css";
+
+.header {
+  min-width: 100vw;
+  min-height: 7em;
+  background-color: var(--dark-charcoal);
+  color: var(--soft-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+  align-self: end;
+  min-width: 10em;
+  font-weight: bolder;
+  font-size: larger;
+}

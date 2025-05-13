@@ -1,0 +1,18 @@
+.custom_button {
+  border: none;
+  border-radius: 8px;
+  background-color: var(--glowing-red);
+  transition: all 0.1s ease;
+  font-weight: bold;
+  max-width: 4em;
+}
+
+.custom_button:hover {
+  background-color: var(--vivid-orange);
+  transform: scale(1.05);
+  box-shadow: var(--glow-shadow);
+}
+
+.custom_button:focus {
+  outline: 2px solid var(--soft-white);
+}

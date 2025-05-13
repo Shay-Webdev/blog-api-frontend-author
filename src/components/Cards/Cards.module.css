@@ -1,0 +1,35 @@
+@import "../../styles/variables.css";
+
+.card {
+  background-color: var(--glowing-red);
+  color: var(--dark-charcoal);
+  box-shadow: var(--css-scan-boxshadow-3);
+  max-width: 20em;
+  min-height: 10em;
+  border: none;
+  border-radius: 8px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  background-color: var(--vivid-orange);
+  transform: scale(1.03);
+}
+
+.card > h1 {
+  font-weight: bolder;
+  font-size: larger;
+  align-self: flex-start;
+  text-decoration: underline;
+}
+
+.card > :last-child {
+  align-self: flex-end;
+}
