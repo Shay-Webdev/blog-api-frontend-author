@@ -7,6 +7,7 @@ function Header() {
       <nav className={styles.header_nav}>
         <MyNavLink To="/">Home</MyNavLink>
         <MyNavLink To="logout">Logout</MyNavLink>
+        <MyNavLink To="posts">Make Blog</MyNavLink>
       </nav>
     </header>
   );

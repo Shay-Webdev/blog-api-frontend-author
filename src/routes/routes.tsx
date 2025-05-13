@@ -1,5 +1,4 @@
 import App from "../Pages/App/App.tsx";
-("../Pages/App/App.tsx");
 import { LoginOrSignup, NoLogin } from "../Pages/NoLoginPage/NoLogin.tsx";
 import { LoginWrapper } from "../Pages/Login/Login.tsx";
 import { SignupWrapper } from "../Pages/SignUp/SignUp.tsx";
@@ -11,6 +10,7 @@ import { PostWrapper } from "../Pages/Posts/Post/Post.tsx";
 import { CommentsWrapper } from "../Pages/Comments/Comments.tsx";
 import { CommentFormWrapper } from "../Pages/Comments/CommentForm/CommnetForm.tsx";
 import type { RouteObject } from "react-router-dom";
+import { CreatePostWrapper } from "../Pages/Posts/CreatePost/CreatePost.tsx";
 
 const routes: RouteObject[] = [
   {
@@ -39,6 +39,10 @@ const routes: RouteObject[] = [
                 element: <CommentFormWrapper />,
               },
             ],
+          },
+          {
+            path: "posts",
+            element: <CreatePostWrapper />,
           },
         ],
       },

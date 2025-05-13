@@ -101,24 +101,24 @@ const Signup = () => {
         <MyInput
           type="text"
           id="signup_username"
-          label="Username"
           name="username"
+          placeholder="username: e.g., john"
           onChange={onChangeHandler}
           value={inputValue?.username}
         />
         <MyInput
           type="email"
           id="signup_email"
-          label="Email"
           name="email"
+          placeholder="email: example@mail.com"
           onChange={onChangeHandler}
           value={inputValue?.email}
         />
         <MyInput
           type="password"
           id="signup_password"
-          label="Password"
           name="password"
+          placeholder="password"
           onChange={onChangeHandler}
           value={inputValue?.password}
         />

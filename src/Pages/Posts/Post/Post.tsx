@@ -1,4 +1,4 @@
-import { z, object, number, string, boolean, coerce } from "zod";
+import { z, number, string, boolean, coerce } from "zod";
 import styles from "./Post.module.css";
 import { useEffect, useState } from "react";
 import { useErrorBoundary } from "react-error-boundary";
@@ -13,9 +13,6 @@ import { Outlet, useParams } from "react-router-dom";
 
 const postSchema = z.object({
   authorId: number(),
-  author: object({
-    username: string(),
-  }),
   id: number(),
   isPublished: boolean(),
   publishedDate: coerce.date(),
@@ -29,6 +26,7 @@ type Post = z.infer<typeof postSchema>;
 const Post = () => {
   const [status, setStatus] = useState<"done" | "pending">("pending");
   const [post, setPost] = useState<Post | undefined | null>(undefined);
+  const [username, setUserName] = useState<string | undefined>(undefined);
   const params = useParams();
   const { showBoundary } = useErrorBoundary();
   useEffect(() => {
@@ -53,6 +51,7 @@ const Post = () => {
           throw new Error(`invalid post data `);
         }
 
+        setUserName(user?.user.username);
         setPost(parsedPost.data);
 
         setStatus("done");
@@ -70,7 +69,7 @@ const Post = () => {
       <div className={styles.post_headings}>
         <h1>{post?.title}</h1>
         <h2>
-          Author: <span>{post?.author.username}</span>
+          Author: <span>{username}</span>
         </h2>
         <h3>
           Posted: <span>{post?.publishedDate.toString()}</span>

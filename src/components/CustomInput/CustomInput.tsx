@@ -25,14 +25,11 @@ const CustomInput = (props: CustomInputProps) => {
   );
 };
 
-type MyInputProps = {
-  label: string;
-} & CustomInputProps;
+type MyInputProps = {} & CustomInputProps;
 const MyInput = (props: MyInputProps) => {
-  const { type, onChange, value, label, id, name } = props;
+  const { type, onChange, value, id, name, placeholder, ...rest } = props;
   return (
     <div className={styles.myinput_container}>
-      <label htmlFor={id}>{label}</label>
       <CustomInput
         className={styles.custom_input}
         onChange={onChange}
@@ -40,6 +37,8 @@ const MyInput = (props: MyInputProps) => {
         type={type}
         id={id}
         name={name}
+        placeholder={placeholder}
+        {...rest}
       />
     </div>
   );
