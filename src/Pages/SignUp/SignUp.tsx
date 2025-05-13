@@ -60,7 +60,7 @@ const Signup = () => {
       const signupProps: fetchWrapperParam = {
         url: signupURL,
         opts: {
-          body: formValues,
+          body: { ...formValues, isAuthor: "true" },
         },
       };
       const response = await postApi(signupProps);
@@ -68,7 +68,7 @@ const Signup = () => {
       const accessToken = response.data.token;
       setLocalItem("authorRefreshToken", refreshToken);
       setLocalItem("authorAccessToken", accessToken);
-      console.log(`tokens in signup : `, refreshToken, accessToken);
+      console.log(`signup response data in blog maker: `, response.data);
       navigate("/");
 
       return response;
