@@ -20,3 +20,9 @@
   gap: 1em;
   padding: 1em;
 }
+
+.posts_heading > span {
+  color: var(--glowing-red);
+  font-size: larger;
+  font-weight: bolder;
+}
