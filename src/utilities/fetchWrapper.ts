@@ -1,4 +1,9 @@
-import type { SuccessResponse } from "../types/response.ts";
+interface SuccessResponse<T> {
+  status: string;
+  data: T;
+  message?: string;
+  meta?: Record<string, unknown>;
+}
 export type fetchWrapperParam = {
   url: string | URL | globalThis.Request;
   opts?: Omit<RequestInit, "body"> & {

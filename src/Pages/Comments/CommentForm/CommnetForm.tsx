@@ -26,7 +26,7 @@ const CommentForm = () => {
     const formValues = Object.fromEntries(formData);
     const result = commentFormSchema.safeParse(formValues);
     if (result.error) {
-      console.error(`error in comment form validation: `, result.error.message);
+      console.error(`error in comment form validation: `, result.error.message, prevState);
       return result.error;
     }
     try {

@@ -29,7 +29,11 @@ const CreatePost = () => {
     const formValues = Object.fromEntries(formData);
     const result = createPostSchema.safeParse(formValues);
     if (result.error) {
-      console.log(`error in login validation: `, result.error.message);
+      console.log(
+        `error in login validation: `,
+        result.error.message,
+        prevState,
+      );
       return result.error;
     }
     try {
