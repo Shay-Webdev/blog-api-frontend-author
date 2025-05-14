@@ -1,26 +1,26 @@
+const urlOrigin = "https://blog-api-backend-vath.onrender.com";
 const urlPaths = {
   userUrl: {
-    users: "http://localhost:3000/users", //GET | POST
-    users_UserId: "http://localhost:3000/users/:userId", //GET | PUT
-    users_Author_UserId: "http://localhost:3000/users/author/:userId", // PUT
+    users: `${urlOrigin}/users`, //GET | POST
+    users_UserId: `${urlOrigin}/users/:userId`, //GET | PUT
+    users_Author_UserId: `${urlOrigin}/users/author/:userId`, // PUT
   },
   postUrl: {
-    posts: "http://localhost:3000/posts", //GET | POST
-    posts_postId: "http://localhost:3000/posts/:postId", // GET | PUT | DELETE
-    posts_userId_posts: "http://localhost:3000/posts/:userId/posts", //GET
+    posts: `${urlOrigin}/posts`, //GET | POST
+    posts_postId: `${urlOrigin}/posts/:postId`, // GET | PUT | DELETE
+    posts_userId_posts: `${urlOrigin}/posts/:userId/posts`, //GET
   },
   commentUrl: {
-    comments: "http://localhost:3000/posts/:postId/comments", // GET | POST
-    comments_commentId:
-      "http://localhost:3000/posts/:postId/comments/:commentId", // GET | PUT | DELETE
+    comments: `${urlOrigin}/posts/:postId/comments`, // GET | POST
+    comments_commentId: `${urlOrigin}/posts/:postId/comments/:commentId`, // GET | PUT | DELETE
   },
   sessionUrl: {
-    signup: "http://localhost:3000/signup", // POST
-    login: "http://localhost:3000/login", // POST
-    logout: "http://localhost:3000/logout", // DELETE
+    signup: `${urlOrigin}/signup`, // POST
+    login: `${urlOrigin}/login`, // POST
+    logout: `${urlOrigin}/logout`, // DELETE
   },
   tokenUrl: {
-    token_Refresh: "http://localhost:3000/token/refresh", //POST
+    token_Refresh: `${urlOrigin}/token/refresh`, //POST
   },
 };
 
